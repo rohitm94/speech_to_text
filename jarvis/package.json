@@ -1,0 +1,16 @@
+{
+  "name": "jarvis",
+  "version": "0.0.1",
+  "description": "this dude is gonna transcribe speech for us",
+  "main": "index.js",
+  "repository": "https://github.com/DhruvDh/speech_to_text",
+  "author": "dhruvhd",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "@google-cloud/speech": "^2.1.1",
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.5",
+    "express": "^4.16.4"
+  }
+}

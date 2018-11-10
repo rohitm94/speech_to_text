@@ -59,3 +59,6 @@ typings/
 
 # next.js build output
 .next
+
+# gcloud keyfile
+jarvis/Speech_to_text-bd8db80ceecf.json

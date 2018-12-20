@@ -28,7 +28,7 @@ yarn serve
 yarn build
 ```
 
-## Compiles for Electron builds
+### Compiles for Electron builds
 ```
 yarn electron:serve // dev
 yarn electron:build // prodcution

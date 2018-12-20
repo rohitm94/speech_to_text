@@ -7,7 +7,15 @@ This software consists of two servers, namely `dashboard` and `jarvis`. `jarvis`
 
 ## Project Setup
 
-First, install all the dependencies using -
+First, ensure you have [node.js](https://nodejs.org/en/) installed. Development is done in v10.9, although there shouldn't be any issues if you run it on any other version.
+
+Install the `yarn` package manager via `npm`. `npm` should be on your path if you correctly installed node.
+
+```
+npm install -g yarn
+```
+
+Then, install all the dependencies using -
 ```
 yarn install
 ```

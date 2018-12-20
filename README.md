@@ -6,13 +6,7 @@ First, ensure you have [node.js](https://nodejs.org/en/) installed. Developed is
 Install the `yarn` package manager via `npm`. `npm` should be on your path if you correctly installed node.
 
 ```
-npm install yarn
-```
-
-And then use yarn to install all node dependencies using - 
-
-```
-yarn install
+npm install -g yarn
 ```
 
 ## Usage
@@ -25,9 +19,21 @@ Use these commands to start the dashboard server -
 ```
 cd dashboard
 ```
-
+First, install all the dependencies using -
 ```
-yarn serve
+npm install
+```
+
+And start the development server using -
+```
+yarn serve // serving a unoptimized dev server with hot reload
+yarn build // generate a production build
+```
+
+For cross-platform builds using [Electron](https://electronjs.org/), do -
+```
+yarn electron:serve
+yarn electron:build
 ```
 
 ### jarvis

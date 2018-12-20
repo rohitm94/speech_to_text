@@ -5,203 +5,219 @@ const fileUpload = require('express-fileupload');
 const cors = require('cors');
 const path = require('path');
 const bodyParser = require('body-parser');
+const moveFile = require('move-file');
+const low = require('lowdb')
+const FileAsync = require('lowdb/adapters/FileAsync')
+var moment = require('moment');
+const adapter = new FileAsync('db.json')
+var nlp = require('compromise')
+
+
+let https = require('https');
+let azure = {
+    uri: 'westcentralus.api.cognitive.microsoft.com',
+    path: '/text/analytics/v2.0/languages',
+    accessKey: '64da3e0e8cc74d088d9fcfd1940f8ae2'
+};
+
+
+let filesQueue = [];
 
 const projectID = 'speech-to-text-1541457033718';
 const keyFile = path.join(__dirname, 'Speech_to_text-bd8db80ceecf.json');
 
 const client = new speech.SpeechClient({
-  projectId: projectID,
-  keyFilename: keyFile,
-  credentials: require(keyFile),
+    projectId: projectID,
+    keyFilename: keyFile,
+    credentials: require(keyFile),
 });
 
 const audioFolder = path.join(__dirname, 'audio');
 
-function recordedRecognize(filename) {
-  const config = {
-    encoding: 'WAV',
-    sampleRateHertz: 48000,
-    languageCode: 'en-US',
-    enableAutomaticPunctuation: true,
-    // enableSpeakerDiarization: true,
-    // diarizationSpeakerCount: 2,
-  };
-  const audio = {
-    content: fs.readFileSync(path.join(audioFolder, 'recorded', filename)).toString('base64'),
-  };
-
-  const request = {
-    config,
-    audio,
-  };
-  let returnVal = {};
-  // Detects speech in the audio file
-  returnVal = client
-    .recognize(request)
-    .then((data) => {
-      const response = data[0];
-      const transcription = response.results
-        .map(result => result.alternatives[0].transcript)
-        .join('\n');
-      //   console.log(`Transcription: ${transcription}`);
-      //   console.log('Speaker Diarization:');
-      const result = response.results[response.results.length - 1];
-      const wordsInfo = result.alternatives[0].words;
-      // Note: The transcript within each result is separate and sequential per result.
-      // However, the words list within an alternative includes all the words
-      // from all the results thus far. Thus, to get all the words with speaker
-      // tags, you only have to take the words list from the last result:
-      wordsInfo.forEach(a => console.log(` word: ${a.word}, speakerTag: ${a.speakerTag}`));
-      return {
-        transcript: transcription,
-        wordsInfo,
-      };
-    })
-    .catch((err) => {
-      console.error('ERROR:', err);
-      return {
-        transcript: null,
-        wordsInfo: null,
-      };
-    });
-
-  return returnVal;
-}
-
-function testRecognize(filename) {
-  const config = {
-    encoding: 'FLAC',
-    sampleRateHertz: 44100,
-    languageCode: 'en-US',
-    enableAutomaticPunctuation: true,
-    // enableSpeakerDiarization: true,
-    // diarizationSpeakerCount: 2,
-  };
-  const audio = {
-    content: fs.readFileSync(path.join(audioFolder, filename)).toString('base64'),
-  };
-
-  const request = {
-    config,
-    audio,
-  };
-  let returnVal = {};
-  // Detects speech in the audio file
-  returnVal = client
-    .recognize(request)
-    .then((data) => {
-      const response = data[0];
-      const transcription = response.results
-        .map(result => result.alternatives[0].transcript)
-        .join('\n');
-      //   console.log(`Transcription: ${transcription}`);
-      //   console.log('Speaker Diarization:');
-      const result = response.results[response.results.length - 1];
-      const wordsInfo = result.alternatives[0].words;
-      // Note: The transcript within each result is separate and sequential per result.
-      // However, the words list within an alternative includes all the words
-      // from all the results thus far. Thus, to get all the words with speaker
-      // tags, you only have to take the words list from the last result:
-      wordsInfo.forEach(a => console.log(` word: ${a.word}, speakerTag: ${a.speakerTag}`));
-      return {
-        transcript: transcription,
-        wordsInfo,
-      };
-    })
-    .catch((err) => {
-      console.error('ERROR:', err);
-      return {
-        transcript: null,
-        wordsInfo: null,
-      };
-    });
-
-  return returnVal;
-}
-
-
 const app = express();
 app.use(cors({
-  origin: '*',
+    origin: '*',
 }));
 app.use(bodyParser());
 app.use(fileUpload());
 
-app.get('/', (req, res) => res.send('Hello World!'));
+low(adapter).then(db => {
+    db.defaults({ audios: [], tables: [1, 2, 3, 4, 5, 6, 7, 8] }).write()
 
-app.get('/gettestfiles', (req, res) => {
-  res.send({
-    names: fs.readdirSync(audioFolder),
-    transcripts: {
-      'Test - 1.flac': 'This is speech to text testing. This is our project for this class.',
-      'Test - 2.flac': 'We are going to sell this project eventually. For now please be patient.',
-      'Test - 3.flac': 'We are building our interface for this project. This is just a test of the API call',
-      'Test - 4.flac': 'Please give us a hundred for this project as we worked hard for it. Google API was used for this project.',
-      'Test - 5.flac': 'Our group is hardworking and we do our work on time.',
-    },
-  });
-});
+    function transcriptize(audioName) {
+        let audio = db.get('audios')
+            .find({ name: audioName })
+            .value();
+        // .then(value => {
+        //     return value;
+        // })
+        // .catch(err => {
+        //     console.log(err);
+        // });
 
-app.get('/gettestfiles', (req, res) => {
-  res.send({
-    names: fs.readdirSync(path.join(audioFolder))
-  });
-});
+        const request = {
+            config: audio['audioConfig'],
+            audio: {
+                content: fs.readFileSync(audio['path']).toString('base64')
+            }
+        }
 
-app.get('/getrecordedfiles', (req, res) => {
-  res.send({
-    names: fs.readdirSync(path.join(audioFolder, 'recorded'))
-  });
-});
+        client
+            .recognize(request)
+            .then((data) => {
+                const response = data[0];
+                const transcription = response.results
+                    .map(result => result.alternatives[0].transcript)
+                    .join('\n');
+                console.log(`Transcription: ${transcription}`);
+                console.log('Speaker Diarization:');
 
-app.post('/gettranscripts', (req, res) => {
-  console.log(`Recieved a request for ${req.body.filename}`);
+                const result = response.results[response.results.length - 1];
+                const wordsInfo = result.alternatives[0].words;
 
-  if (req.body.testMode) {
-    testRecognize(req.body.filename).then((response) => {
-      console.log(response);
-      res.send({
-        transcript: response.transcript,
-        wordsInfo: response.wordsInfo,
-      });
+                // Note: The transcript within each result is separate and sequential per result.
+                // However, the words list within an alternative includes all the words
+                // from all the results thus far. Thus, to get all the words with speaker
+                // tags, you only have to take the words list from the last result:
+                wordsInfo.forEach(a => console.log(` word: ${a.word}, speakerTag: ${a.speakerTag}`));
+
+                doc = nlp(transcription);
+
+                let analysis = {
+                    topics: doc.topics().data(),
+                    tags: doc.out('tags'),
+                    peoples: doc.people().out('array'),
+                    organizations: doc.organizations().out('array'),
+                    places: doc.places().out('array'),
+                    questions: doc.questions().out('array'),
+                    acronyms: doc.acronyms().out('array'),
+                    statements: doc.statements().out('array'),
+                    urls: doc.urls().out('array'),
+                    dates: doc.dates().out('array'),
+                    noun: doc.nouns().out('array'),
+                }
+
+                console.log(JSON.stringify(analysis))
+
+                db.get('audios')
+                    .find({ name: audioName })
+                    .assign({
+                        transcript: transcription,
+                        wordsInfo: wordsInfo,
+                        analysis: {
+                            ...analysis
+                        }
+                    })
+                    .write();
+
+                return db.get('audios')
+                    .find({ name: audioName }).value()
+
+
+            })
+            .catch((err) => {
+                console.error('ERROR:', err);
+                return undefined
+            });
+    }
+
+    app.post('/records', (req, res) => {
+        if (req.body.tableNo) {
+            console.log('finding records for ' + req.body.tableNo)
+            let records = db.get('audios').filter({ tableNo: req.body.tableNo.toString() }).value();
+
+            res.status(200).send([...records])
+        } else {
+            console.log('Got a request for /records without any tableNo');
+        }
+    })
+
+    app.post('/upload', function (req, res) {
+        console.log('I think I got a file!');
+        if (Object.keys(req.files).length == 0) {
+            return res.status(400).send('No files were uploaded.');
+        }
+
+        // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
+        let audioFile = req.files.audio;
+        audioFile.name = audioFile.name + '.wav';
+        // Use the mv() method to place the file somewhere on your server
+        audioFile.mv(path.join(audioFolder, 'temp', audioFile.name), function (err) {
+            if (err)
+                return res.status(500).send(err);
+
+            filesQueue.push(audioFile.name)
+            console.log('File moved! ' + audioFile.name)
+            res.status(200).send('Success!');
+        });
     });
-  }
-  else {
-    recordedRecognize(req.body.filename).then((response) => {
-      console.log(response);
-      res.send({
-        transcript: response.transcript,
-        wordsInfo: response.wordsInfo,
-      });
-    });
-  }
-});
 
-// app.get('audioFile', (req, res) => {
-//   const filePath = path.join(audioFolder, req.body.filename);
-//   res.download(filePath, req.body.filename, (err) => {
-//     console.log("couldn't download..");
-//     console.log(err);
-//   });
-// });
+    app.post('/uploadDetails', function (req, res) {
+        console.log('Got details for a file!');
 
-app.post('/upload', function (req, res) {
-  console.log('I think I got a file!');
-  if (Object.keys(req.files).length == 0) {
-    return res.status(400).send('No files were uploaded.');
-  }
+        (async () => {
+            try {
+                await moveFile(
+                    path.join(audioFolder, 'temp', filesQueue.pop()),
+                    path.join(audioFolder, req.body.tableNo, req.body.name + '.wav'),
+                    { overwrite: true }
+                );
+            }
+            catch (e) {
+                console.log(e)
+            }
 
-  // The name of the input field (i.e. "sampleFile") is used to retrieve the uploaded file
-  let audioFile = req.files.audio;
-  audioFile.name = audioFile.name + '.wav';
-  // Use the mv() method to place the file somewhere on your server
-  audioFile.mv(path.join(audioFolder, 'recorded', audioFile.name), function (err) {
-    if (err)
-      return res.status(500).send(err);
+            let newDoc = {
+                ...req.body,
+                time: moment().format("h:mm a, MMMM Do YY"),
+                analysis: undefined,
+                transcript: undefined,
+                wordsInfo: undefined,
+                audioConfig: {
+                    encoding: 'WAV',
+                    sampleRateHertz: 48000,
+                    languageCode: 'en-US',
+                    enableAutomaticPunctuation: true,
+                    enableSpeakerDiarization: true,
+                    diarizationSpeakerCount: req.body.speakerCount,
+                },
+                path: path.join(audioFolder, req.body.tableNo, req.body.name + '.wav')
+            };
 
-    console.log('File moved!')
-    res.send('File uploaded!');
-  });
-});
+            let findResult = db.get('audios')
+                .find({ name: req.body.name })
+                .value();
 
-app.listen(3000, () => console.log('JARVIS is now listening with his special transcribing pen ready...'));
+            if (findResult) {
+                db.get('audios')
+                    .find({ name: req.body.name })
+                    .assign({ ...newDoc })
+                    .write();
+
+                transcriptize(newDoc['name'])
+            }
+            else {
+                db.get('audios')
+                    .push(newDoc)
+                    .write()
+
+                transcriptize(newDoc['name'])
+            }
+
+            // db.saveSync('db.json');
+            console.log('File moved! ' + req.body.tableNo + '/' + req.body.name);
+
+        })();
+    })
+
+    app.get('/init', (req, res) => {
+        console.log('Got request for /init!')
+        res.send({
+            tables: db.getState()['tables']
+        })
+    })
+
+    return db.write()
+}).then(() => {
+    app.listen(3000, () => console.log('JARVIS is now listening with his special transcribing pen ready...'));
+})

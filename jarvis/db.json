@@ -1,0 +1,1473 @@
+{
+  "audios": [
+    {
+      "name": "test",
+      "desc": "30 mins to presentation",
+      "speakerCount": 1,
+      "tableNo": "2",
+      "time": "4:35 pm, December 3rd 18",
+      "analysis": {
+        "topics": [],
+        "sentences": [
+          "this is the best office software",
+          "presentation",
+          "let's see what happens"
+        ],
+        "tags": [
+          {
+            "text": "This",
+            "normal": "this",
+            "tags": [
+              "TitleCase",
+              "Determiner"
+            ]
+          },
+          {
+            "text": "is",
+            "normal": "is",
+            "tags": [
+              "Copula",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "best",
+            "normal": "best",
+            "tags": [
+              "Comparable",
+              "Adjective"
+            ]
+          },
+          {
+            "text": "office",
+            "normal": "office",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "software.",
+            "normal": "software",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "presentation",
+            "normal": "presentation",
+            "tags": [
+              "Singular",
+              "Noun"
+            ]
+          },
+          {
+            "text": "Let's",
+            "normal": "let's",
+            "tags": [
+              "TitleCase",
+              "PastTense",
+              "Verb",
+              "VerbPhrase",
+              "Contraction"
+            ]
+          },
+          {
+            "text": "",
+            "normal": "",
+            "tags": [
+              "Contraction"
+            ]
+          },
+          {
+            "text": "see",
+            "normal": "see",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "what",
+            "normal": "what",
+            "tags": [
+              "QuestionWord"
+            ]
+          },
+          {
+            "text": "happens.",
+            "normal": "happens",
+            "tags": [
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          }
+        ],
+        "people": [],
+        "peopleFreqs": [],
+        "date": [],
+        "dateFreqs": [],
+        "noun": [
+          "office software",
+          "presentation"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "presentation",
+            "count": 1,
+            "percent": 50
+          },
+          {
+            "normal": "office software",
+            "count": 1,
+            "percent": 50
+          }
+        ]
+      },
+      "transcript": "This is the best office software.\n presentation\n Let's see what happens.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\2\\test.wav"
+    },
+    {
+      "name": "obama",
+      "desc": "idk",
+      "speakerCount": 1,
+      "tableNo": "2",
+      "time": "4:57 pm, December 3rd 18",
+      "analysis": {
+        "topics": [
+          {
+            "text": " Barack Obama.",
+            "normal": "barack obama"
+          }
+        ],
+        "sentences": [
+          "let's talk about barack obama"
+        ],
+        "tags": [
+          {
+            "text": "Let's",
+            "normal": "let's",
+            "tags": [
+              "TitleCase",
+              "PastTense",
+              "Verb",
+              "VerbPhrase",
+              "Contraction"
+            ]
+          },
+          {
+            "text": "",
+            "normal": "",
+            "tags": [
+              "Contraction"
+            ]
+          },
+          {
+            "text": "talk",
+            "normal": "talk",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "about",
+            "normal": "about",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "Barack",
+            "normal": "barack",
+            "tags": [
+              "TitleCase",
+              "Person",
+              "Singular",
+              "Noun",
+              "FirstName",
+              "ProperNoun"
+            ]
+          },
+          {
+            "text": "Obama.",
+            "normal": "obama",
+            "tags": [
+              "TitleCase",
+              "LastName",
+              "Person",
+              "Singular",
+              "Noun",
+              "ProperNoun"
+            ]
+          }
+        ],
+        "people": [
+          "barack obama"
+        ],
+        "peopleFreqs": [
+          {
+            "normal": "barack obama",
+            "count": 1,
+            "percent": 100
+          }
+        ],
+        "date": [],
+        "dateFreqs": [],
+        "noun": [
+          "barack obama"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "barack obama",
+            "count": 1,
+            "percent": 100
+          }
+        ]
+      },
+      "transcript": "Let's talk about Barack Obama.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\2\\obama.wav"
+    },
+    {
+      "name": "date",
+      "desc": "presentation",
+      "speakerCount": 1,
+      "tableNo": "2",
+      "time": "4:57 pm, December 3rd 18",
+      "analysis": {
+        "topics": [],
+        "sentences": [
+          "beat the boss"
+        ],
+        "tags": [
+          {
+            "text": "Beat",
+            "normal": "beat",
+            "tags": [
+              "TitleCase",
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "Boss",
+            "normal": "boss",
+            "tags": [
+              "TitleCase",
+              "Noun",
+              "Singular"
+            ]
+          }
+        ],
+        "people": [],
+        "peopleFreqs": [],
+        "date": [],
+        "dateFreqs": [],
+        "noun": [
+          "boss"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "boss",
+            "count": 1,
+            "percent": 100
+          }
+        ]
+      },
+      "transcript": "Beat the Boss",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\2\\date.wav"
+    },
+    {
+      "name": "presentation",
+      "speakerCount": 1,
+      "tableNo": "2",
+      "time": "5:17 pm, December 3rd 18",
+      "analysis": {
+        "topics": [],
+        "sentences": [
+          "so the final presentation that you had scheduled for the 5th of december is now going to be on monday"
+        ],
+        "tags": [
+          {
+            "text": "So",
+            "normal": "so",
+            "tags": [
+              "TitleCase",
+              "Adverb"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "final",
+            "normal": "final",
+            "tags": [
+              "Adjective"
+            ]
+          },
+          {
+            "text": "presentation",
+            "normal": "presentation",
+            "tags": [
+              "Singular",
+              "Noun"
+            ]
+          },
+          {
+            "text": "that",
+            "normal": "that",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "you",
+            "normal": "you",
+            "tags": [
+              "Pronoun",
+              "Noun"
+            ]
+          },
+          {
+            "text": "had",
+            "normal": "had",
+            "tags": [
+              "PastTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "scheduled",
+            "normal": "scheduled",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "for",
+            "normal": "for",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner",
+              "Date"
+            ]
+          },
+          {
+            "text": "5th",
+            "normal": "5th",
+            "tags": [
+              "Value",
+              "NumericValue",
+              "Ordinal",
+              "Date"
+            ]
+          },
+          {
+            "text": "of",
+            "normal": "of",
+            "tags": [
+              "Preposition",
+              "Date"
+            ]
+          },
+          {
+            "text": "December",
+            "normal": "december",
+            "tags": [
+              "TitleCase",
+              "Month",
+              "Date",
+              "Singular",
+              "Noun",
+              "ProperNoun"
+            ]
+          },
+          {
+            "text": "is",
+            "normal": "is",
+            "tags": [
+              "Copula",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "now",
+            "normal": "now",
+            "tags": [
+              "Time",
+              "Date",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "going",
+            "normal": "going",
+            "tags": [
+              "Gerund",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "to",
+            "normal": "to",
+            "tags": [
+              "Conjunction"
+            ]
+          },
+          {
+            "text": "be",
+            "normal": "be",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "on",
+            "normal": "on",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "Monday.",
+            "normal": "monday",
+            "tags": [
+              "TitleCase",
+              "WeekDay",
+              "Date",
+              "Noun"
+            ]
+          }
+        ],
+        "people": [],
+        "peopleFreqs": [],
+        "date": [
+          "the 5th of december",
+          "now",
+          "monday"
+        ],
+        "dateFreqs": [
+          {
+            "normal": "monday",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "now",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "the 5th of december",
+            "count": 1,
+            "percent": 33.33
+          }
+        ],
+        "noun": [
+          "presentation",
+          "scheduled",
+          "now"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "now",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "scheduled",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "presentation",
+            "count": 1,
+            "percent": 33.33
+          }
+        ]
+      },
+      "transcript": "So the final presentation that you had scheduled for the 5th of December is now going to be on Monday.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\2\\presentation.wav"
+    },
+    {
+      "name": "dhruv is a dick",
+      "speakerCount": 1,
+      "tableNo": "5",
+      "time": "7:34 pm, December 4th 18",
+      "analysis": {
+        "topics": [],
+        "sentences": [
+          "hi computer"
+        ],
+        "tags": [
+          {
+            "text": "Hi",
+            "normal": "hi",
+            "tags": [
+              "TitleCase",
+              "Expression"
+            ]
+          },
+          {
+            "text": "computer.",
+            "normal": "computer",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          }
+        ],
+        "people": [],
+        "peopleFreqs": [],
+        "date": [],
+        "dateFreqs": [],
+        "noun": [
+          "computer"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "computer",
+            "count": 1,
+            "percent": 100
+          }
+        ]
+      },
+      "transcript": "Hi computer.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\5\\dhruv is a dick.wav"
+    },
+    {
+      "speakerCount": 1,
+      "tableNo": "5",
+      "time": "7:35 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\5\\undefined.wav"
+    },
+    {
+      "speakerCount": 1,
+      "tableNo": "3",
+      "time": "7:40 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\3\\undefined.wav"
+    },
+    {
+      "speakerCount": 1,
+      "tableNo": "3",
+      "time": "7:42 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\3\\undefined.wav"
+    },
+    {
+      "speakerCount": 1,
+      "tableNo": "3",
+      "time": "7:43 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\3\\undefined.wav"
+    },
+    {
+      "speakerCount": 1,
+      "tableNo": "3",
+      "time": "7:45 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\3\\undefined.wav"
+    },
+    {
+      "name": "the first hope",
+      "speakerCount": 1,
+      "tableNo": "1",
+      "time": "7:52 pm, December 4th 18",
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\1\\the first hope.wav"
+    },
+    {
+      "name": "second hope",
+      "speakerCount": 1,
+      "tableNo": "1",
+      "time": "7:59 pm, December 4th 18",
+      "analysis": {
+        "topics": [],
+        "sentences": [
+          "what you can do it cetera you can also meet old county circle independent variables and create variables processing time",
+          "which is the difference between claim close date and end date to day of the week each group based on the following values 18 years or younger 19 years old 55-64 years for the date of the incident calculated by subtracting returnto-work date"
+        ],
+        "tags": [
+          {
+            "text": "What",
+            "normal": "what",
+            "tags": [
+              "TitleCase",
+              "QuestionWord"
+            ]
+          },
+          {
+            "text": "you",
+            "normal": "you",
+            "tags": [
+              "Pronoun",
+              "Noun"
+            ]
+          },
+          {
+            "text": "can",
+            "normal": "can",
+            "tags": [
+              "Modal",
+              "Verb",
+              "VerbPhrase",
+              "Auxiliary"
+            ]
+          },
+          {
+            "text": "do",
+            "normal": "do",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "it",
+            "normal": "it",
+            "tags": [
+              "Pronoun",
+              "Noun"
+            ]
+          },
+          {
+            "text": "cetera",
+            "normal": "cetera",
+            "tags": [
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "you",
+            "normal": "you",
+            "tags": [
+              "Pronoun",
+              "Noun"
+            ]
+          },
+          {
+            "text": "can",
+            "normal": "can",
+            "tags": [
+              "Modal",
+              "Verb",
+              "VerbPhrase",
+              "Auxiliary"
+            ]
+          },
+          {
+            "text": "also",
+            "normal": "also",
+            "tags": [
+              "Adverb",
+              "Auxiliary",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "meet",
+            "normal": "meet",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "old",
+            "normal": "old",
+            "tags": [
+              "Comparable",
+              "Adjective"
+            ]
+          },
+          {
+            "text": "County",
+            "normal": "county",
+            "tags": [
+              "TitleCase",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "Circle",
+            "normal": "circle",
+            "tags": [
+              "TitleCase",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "independent",
+            "normal": "independent",
+            "tags": [
+              "Adjective"
+            ]
+          },
+          {
+            "text": "variables",
+            "normal": "variables",
+            "tags": [
+              "Noun",
+              "Plural"
+            ]
+          },
+          {
+            "text": "and",
+            "normal": "and",
+            "tags": [
+              "Conjunction"
+            ]
+          },
+          {
+            "text": "create",
+            "normal": "create",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "variables",
+            "normal": "variables",
+            "tags": [
+              "Noun",
+              "Plural"
+            ]
+          },
+          {
+            "text": "processing",
+            "normal": "processing",
+            "tags": [
+              "Gerund",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "time,",
+            "normal": "time",
+            "tags": [
+              "Uncountable",
+              "Noun",
+              "Comma",
+              "ClauseEnd"
+            ]
+          },
+          {
+            "text": "which",
+            "normal": "which",
+            "tags": [
+              "QuestionWord"
+            ]
+          },
+          {
+            "text": "is",
+            "normal": "is",
+            "tags": [
+              "Copula",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "difference",
+            "normal": "difference",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "between",
+            "normal": "between",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "claim",
+            "normal": "claim",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "close",
+            "normal": "close",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "date",
+            "normal": "date",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "and",
+            "normal": "and",
+            "tags": [
+              "Conjunction"
+            ]
+          },
+          {
+            "text": "end",
+            "normal": "end",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "date",
+            "normal": "date",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "to",
+            "normal": "to",
+            "tags": [
+              "Conjunction"
+            ]
+          },
+          {
+            "text": "day",
+            "normal": "day",
+            "tags": [
+              "Duration",
+              "Date",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "of",
+            "normal": "of",
+            "tags": [
+              "Preposition",
+              "Date"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner",
+              "Date"
+            ]
+          },
+          {
+            "text": "week",
+            "normal": "week",
+            "tags": [
+              "Duration",
+              "Date",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "each",
+            "normal": "each",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "group",
+            "normal": "group",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "based",
+            "normal": "based",
+            "tags": [
+              "PastTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "on",
+            "normal": "on",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "following",
+            "normal": "following",
+            "tags": [
+              "Noun"
+            ]
+          },
+          {
+            "text": "values",
+            "normal": "values",
+            "tags": [
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "18",
+            "normal": "18",
+            "tags": [
+              "NumericValue",
+              "Value",
+              "Cardinal",
+              "Date"
+            ]
+          },
+          {
+            "text": "years",
+            "normal": "years",
+            "tags": [
+              "Duration",
+              "Date",
+              "Noun",
+              "Plural",
+              "Unit"
+            ]
+          },
+          {
+            "text": "or",
+            "normal": "or",
+            "tags": [
+              "Conjunction",
+              "Date"
+            ]
+          },
+          {
+            "text": "younger",
+            "normal": "younger",
+            "tags": [
+              "Comparative",
+              "Adjective"
+            ]
+          },
+          {
+            "text": "19",
+            "normal": "19",
+            "tags": [
+              "NumericValue",
+              "Value",
+              "Cardinal"
+            ]
+          },
+          {
+            "text": "years",
+            "normal": "years",
+            "tags": [
+              "Noun",
+              "Unit",
+              "Plural"
+            ]
+          },
+          {
+            "text": "old",
+            "normal": "old",
+            "tags": [
+              "Unit",
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "55-64",
+            "normal": "55-64",
+            "tags": [
+              "Value",
+              "NumberRange",
+              "Contraction",
+              "NumericValue",
+              "Date",
+              "Cardinal"
+            ]
+          },
+          {
+            "text": "",
+            "normal": "",
+            "tags": [
+              "Contraction",
+              "NumberRange",
+              "Preposition",
+              "Date"
+            ]
+          },
+          {
+            "text": "",
+            "normal": "",
+            "tags": [
+              "Contraction",
+              "NumberRange",
+              "NumericValue",
+              "Value",
+              "Date"
+            ]
+          },
+          {
+            "text": "years",
+            "normal": "years",
+            "tags": [
+              "Duration",
+              "Date",
+              "Noun",
+              "Plural",
+              "Unit"
+            ]
+          },
+          {
+            "text": "for",
+            "normal": "for",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "date",
+            "normal": "date",
+            "tags": [
+              "Noun"
+            ]
+          },
+          {
+            "text": "of",
+            "normal": "of",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "the",
+            "normal": "the",
+            "tags": [
+              "Determiner"
+            ]
+          },
+          {
+            "text": "incident",
+            "normal": "incident",
+            "tags": [
+              "Noun"
+            ]
+          },
+          {
+            "text": "calculated",
+            "normal": "calculated",
+            "tags": [
+              "PastTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "by",
+            "normal": "by",
+            "tags": [
+              "Preposition"
+            ]
+          },
+          {
+            "text": "subtracting",
+            "normal": "subtracting",
+            "tags": [
+              "Gerund",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "return-to-work",
+            "normal": "returnto-work",
+            "tags": [
+              "Noun",
+              "Singular"
+            ]
+          },
+          {
+            "text": "date.",
+            "normal": "date",
+            "tags": [
+              "Infinitive",
+              "PresentTense",
+              "Verb",
+              "VerbPhrase"
+            ]
+          }
+        ],
+        "people": [],
+        "peopleFreqs": [],
+        "date": [
+          "day of the week",
+          "18 years or",
+          "55-64 years"
+        ],
+        "dateFreqs": [
+          {
+            "normal": "55 to 64 years",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "18 years or",
+            "count": 1,
+            "percent": 33.33
+          },
+          {
+            "normal": "day of the week",
+            "count": 1,
+            "percent": 33.33
+          }
+        ],
+        "noun": [
+          "county circle",
+          "variables",
+          "variables",
+          "time",
+          "difference",
+          "day of the week",
+          "group",
+          "following",
+          "years",
+          "years old",
+          "years",
+          "date of the incident",
+          "returnto-work"
+        ],
+        "nounFreqs": [
+          {
+            "normal": "variables",
+            "count": 2,
+            "percent": 15.38
+          },
+          {
+            "normal": "years",
+            "count": 2,
+            "percent": 15.38
+          },
+          {
+            "normal": "group",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "returnto-work",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "county circle",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "date of the incident",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "years old",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "time",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "following",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "difference",
+            "count": 1,
+            "percent": 7.69
+          },
+          {
+            "normal": "day of the week",
+            "count": 1,
+            "percent": 7.69
+          }
+        ]
+      },
+      "transcript": "What you can do it cetera you can also meet old County Circle independent variables and create variables processing time, which is the difference between claim close date and end date to day of the week each group based on the following values 18 years or younger 19 years old 55-64 years for the date of the incident calculated by subtracting return-to-work date.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\1\\second hope.wav"
+    },
+    {
+      "name": "wed",
+      "desc": "5/12",
+      "speakerCount": 1,
+      "tableNo": "2",
+      "time": "5:40 pm, December 5th 18",
+      "analysis": {
+        "topics": [],
+        "tags": [
+          {
+            "text": "When",
+            "normal": "when",
+            "tags": [
+              "TitleCase",
+              "Conjunction"
+            ]
+          },
+          {
+            "text": "you're",
+            "normal": "you're",
+            "tags": [
+              "Pronoun",
+              "Noun",
+              "Contraction"
+            ]
+          },
+          {
+            "text": "",
+            "normal": "",
+            "tags": [
+              "Contraction",
+              "Copula",
+              "Verb",
+              "VerbPhrase"
+            ]
+          },
+          {
+            "text": "done.",
+            "normal": "done",
+            "tags": [
+              "Adjective"
+            ]
+          }
+        ],
+        "peoples": [],
+        "organizations": [],
+        "places": [],
+        "questions": [],
+        "acronyms": [],
+        "statements": [
+          "when you're done"
+        ],
+        "urls": [],
+        "dates": [],
+        "noun": []
+      },
+      "transcript": "When you're done.",
+      "wordsInfo": [],
+      "audioConfig": {
+        "encoding": "WAV",
+        "sampleRateHertz": 48000,
+        "languageCode": "en-US",
+        "enableAutomaticPunctuation": true,
+        "enableSpeakerDiarization": true,
+        "diarizationSpeakerCount": 1
+      },
+      "path": "C:\\Users\\dhruv\\Documents\\Software System Design and Implementation\\final\\jarvis\\audio\\2\\wed.wav"
+    }
+  ],
+  "tables": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ]
+}

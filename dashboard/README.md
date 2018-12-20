@@ -1,5 +1,7 @@
 # dashboard
 
+This software consists of two servers, namely dashboard and jarvis. jarvis handles all API calls to Google Cloud, while dashboard is used to serve the dashboard to the client. This is done for flexibility in terms of development and deployment technologies.
+
 ## Project setup
 ```
 npm install

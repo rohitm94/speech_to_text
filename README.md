@@ -42,9 +42,13 @@ Use these commands to start the jarvis server -
 ```
 cd jarvis
 ```
-
+First, install all the dependencies using -
 ```
-node index.js
+yarn install
+```
+And start the server using -
+```
+node index.js // listens on localhost, port 3000
 ```
 
 > `jarvis` won't be able to successfully make API calls until you supply it with an Google cloud authentication key of your own.
